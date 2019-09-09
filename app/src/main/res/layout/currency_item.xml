@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="item"
+                  type="com.example.currency.data.entity.Rate"/>
+    </data>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv_body"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            android:clipToPadding="true"
+            app:cardPreventCornerOverlap="true">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackground">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrencyFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:ellipsize="end"
+                        android:drawablePadding="4dp"
+                        android:drawableRight="@drawable/ic_compare_arrows"
+                        tools:text="Eur"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrencyTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="4dp"
+                        android:ellipsize="end"
+                        tools:text="USD"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrencyRate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:ellipsize="end"
+                        tools:text="10"/>
+
+                <ImageView
+                        android:id="@+id/imgCurrencyStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_trending_up"
+                        android:layout_marginRight="8dp"/>
+
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                  android:background="#E7E7E7"
+            android:layout_margin="8dp"
+            />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
